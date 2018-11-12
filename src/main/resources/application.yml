@@ -1,0 +1,18 @@
+# 配置名称
+spring:
+  application:
+    name: EurekaServer
+
+# 配置端口
+server:
+  port: 18090
+
+# 配置注册中心
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
